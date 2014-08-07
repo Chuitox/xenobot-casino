@@ -31,7 +31,7 @@
 				Payout: 1 - 500%
 				
 		3. DO NOT perform actions manually with the script running, first type /stop in the script channel
-		4. The features that affect performance are labelled
+		4. The features that affect performance are labeled
 		5. Trashed dice will go to the items container when items are accepted
 		6. Start the script by activating the Walker or placing yourself in the LEFT SIDE of a depot and typing /start
 		7. Type /help in the script channel for a list of available commands
@@ -341,30 +341,30 @@
 	Items_List =
 	{
 		-- Products --
-		{ Name = "Magic Sulphur",				Value = 8000	},
-		{ Name = "Dragon Claw",					Value = 300000	},
-		{ Name = "Soul Stone",					Value = 500000	},
-		{ Name = "Spider Silk",					Value = 4000	},
-		{ Name = "Dracola's Eye",				Value = 50000	},
-		{ Name = "Dracoyle Statue",				Value = 5000	},
-		{ Name = "Red Piece Of Cloth",			Value = 20000	},
-		{ Name = "Flask of Warrior's Sweat",	Value = 10000	},
-		{ Name = "Mr. Punish's Handcuffs",		Value = 50000	},
-		{ Name = "Piece of Massacre's Shell",	Value = 50000	},
-		{ Name = "Skeleton Decoration",			Value = 3000	},
-		{ Name = "Sniper Gloves",				Value = 2000	},
+		{ Name = "Magic Sulphur",				Value = 8000 	},
+		{ Name = "Dragon Claw",					Value = 300000 	},
+		{ Name = "Soul Stone",					Value = 500000 	},
+		{ Name = "Spider Silk",					Value = 4000 	},
+		{ Name = "Dracola's Eye", 				Value = 50000 	},
+		{ Name = "Dracoyle Statue", 			Value = 5000 	},
+		{ Name = "Red Piece Of Cloth", 			Value = 20000 	},
+		{ Name = "Flask of Warrior's Sweat",	Value = 10000 	},
+		{ Name = "Mr. Punish's Handcuffs", 		Value = 50000 	},
+		{ Name = "Piece of Massacre's Shell", 	Value = 50000 	},
+		{ Name = "Skeleton Decoration", 		Value = 3000 	},
+		{ Name = "Sniper Gloves", 				Value = 2000 	},
 		{ Name = "Spirit Container", 			Value = 40000	},
-		{ Name = "Tentacle Piece",				Value = 5000	},
-		{ Name = "The Plasmother's Remains",	Value = 50000 	},
-		{ Name = "Demonic Essence",				Value = 1000	},
+		{ Name = "Tentacle Piece", 				Value = 5000 	},
+		{ Name = "The Plasmother's Remains", 	Value = 50000 	},
+		{ Name = "Demonic Essence", 			Value = 1000 	},
 		-- Others --
-		{ Name = "Pair Of Soft Boots",			Value = 300000	},
-		{ Name = "Worn Soft Boots",				Value = 300000	},
-		{ Name = "Firewalker Boots",			Value = 150000	},
-		{ Name = "Worn Firewalker Boots", 		Value = 150000	},
+		{ Name = "Pair Of Soft Boots", 			Value = 300000 	},
+		{ Name = "Worn Soft Boots", 			Value = 300000 	},
+		{ Name = "Firewalker Boots", 			Value = 150000 	},
+		{ Name = "Worn Firewalker Boots", 		Value = 150000 	},
 		-- Blue Djinn --
-		{ Name = "Angelic Axe",					Value = 5000	},
-		{ Name = "Blue Robe",					Value = 10000	},
+		{ Name = "Angelic Axe", 				Value = 5000	},
+		{ Name = "Blue Robe", 					Value = 10000 	},
 		{ Name = "Boots Of Haste",				Value = 30000	},
 		{ Name = "Butcher's Axe",				Value = 18000	},
 		{ Name = "Crown Armor",					Value = 12000	},
