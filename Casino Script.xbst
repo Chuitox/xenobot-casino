@@ -1,0 +1,262 @@
+<panel name="Self Healer">
+	<control name="SpellList">
+	</control>
+	<control name="ItemList">
+	</control>
+</panel>
+<panel name="Support">
+	<control name="HiHealSpell" value="Exura"/>
+	<control name="HiHealHealth" value="90"/>
+	<control name="HiHealRange" value="5"/>
+	<control name="HiHealMana" value="20"/>
+	<control name="HiHealEnable" value="0"/>
+	<control name="LoHealSpell" value="Exura Gran"/>
+	<control name="LoHealHealth" value="55"/>
+	<control name="LoHealPerc" value="5"/>
+	<control name="LoHealMana" value="70"/>
+	<control name="LoHealEnable" value="0"/>
+	<control name="PotHealID" value="266"/>
+	<control name="PotHealHealth" value="50"/>
+	<control name="PotHealRange" value="5"/>
+	<control name="PotHealEnable" value="0"/>
+	<control name="ManaRestoreID" value="268"/>
+	<control name="ManaRestoreMana" value="50"/>
+	<control name="ManaRestoreEnable" value="0"/>
+</panel>
+<panel name="Frag Helper">
+	<control name="HoldTarg" value="0"/>
+	<control name="ComboEnable" value="0"/>
+</panel>
+<panel name="Tools">
+	<control name="LightEnable" value="0"/>
+	<control name="XRayEnable" value="0"/>
+	<control name="ShowLookIDs" value="0"/>
+	<control name="ShowManaBar" value="0"/>
+	<control name="ShowBPInfo" value="0"/>
+	<control name="EnableAntiIdle" value="0"/>
+	<control name="EnableEatFood" value="0"/>
+	<control name="EnableAdvancedInfo" value="0"/>
+</panel>
+<panel name="Combo Options">
+	<control name="ComboSayLeader" value=""/>
+	<control name="ComboSayPhrase" value=""/>
+	<control name="ComboSayEnable" value="0"/>
+	<control name="ComboShotLeader" value=""/>
+	<control name="ComboShotType" value="0"/>
+	<control name="ComboShotEnable" value="0"/>
+	<control name="ComboExivaLeader" value=""/>
+	<control name="ComboExivaEnable" value="0"/>
+	<control name="ComboParaWatch" value="0"/>
+	<control name="ComboParaEnable" value="0"/>
+	<control name="ComboPartyWatch" value="0"/>
+	<control name="ComboPartyEnable" value="0"/>
+	<control name="ComboAttackSpell" value="Exevo Gran Mas Frigo"/>
+	<control name="ComboAttackSpellEnable" value="0"/>
+	<control name="ComboAttackRuneID" value="3155"/>
+	<control name="ComboAttackRuneEnable" value="0"/>
+	<control name="ComboFocusType" value="0"/>
+</panel>
+<panel name="HUD">
+	<control name="HUDItemList">
+		<item textColor="9" x="5" y="5" pos="4" checked="0"/>
+		<item textColor="8" x="5" y="5" pos="6" checked="0"/>
+		<item textColor="7" x="5" y="5" pos="0" checked="0"/>
+		<item textColor="6" x="5" y="5" pos="8" checked="0"/>
+		<item textColor="4" x="5" y="5" pos="10" checked="0"/>
+		<item textColor="13" x="5" y="5" pos="0" checked="0"/>
+		<item textColor="13" x="5" y="5" pos="2" checked="0"/>
+		<item textColor="0" x="0" y="0" pos="0" checked="0"/>
+	</control>
+	<control name="HPPercOnClick" value="0"/>
+	<control name="MPPercOnClick" value="0"/>
+	<control name="MPPercClickEnable" value="0"/>
+	<control name="MPPercClickEnable" value="0"/>
+</panel>
+<panel name="Recent Loot">
+	<control name="LootMonsterList">
+	</control>
+	<control name="DisplaySelectLoot" value="0"/>
+	<control name="HideNothingLoot" value="0"/>
+</panel>
+<panel name="Spell Timers">
+	<control name="ShowHasteTimer" value="1"/>
+	<control name="ShowManaTimer" value="1"/>
+	<control name="ShowInvisibleTimer" value="1"/>
+	<control name="ShowBuffTimers" value="1"/>
+</panel>
+<panel name="Kill Counters">
+	<control name="KillCounterBox">
+	</control>
+	<control name="DisplaySelectCounters" value="0"/>
+	<control name="DisplayCountRatios" value="0"/>
+</panel>
+<panel name="Battle Information">
+	<control name="ShowTakenDamage" value="1"/>
+	<control name="ShowTakenAvgDamage" value="1"/>
+	<control name="ShowTakenBurstDamage" value="1"/>
+	<control name="ShowDealtDamage" value="1"/>
+	<control name="ShowTarget" value="1"/>
+	<control name="ShowFollow" value="1"/>
+	<control name="ShowExiva" value="1"/>
+</panel>
+<panel name="Experience Information">
+	<control name="ShowHourlyExp" value="1"/>
+	<control name="ShowExpTogo" value="1"/>
+	<control name="ShowTimeLeft" value="1"/>
+</panel>
+<panel name="Condition Manager">
+	<control name="PoisonCureLimit" value="6"/>
+	<control name="PoisonCureMana" value="20"/>
+	<control name="PoisonCureEnable" value="0"/>
+	<control name="DeathCureLimit" value="10"/>
+	<control name="DeathCureMana" value="40"/>
+	<control name="DeathCureEnable" value="0"/>
+	<control name="PhysicalCureLimit" value="5"/>
+	<control name="PhysicalCureMana" value="30"/>
+	<control name="PhysicalCureEnable" value="0"/>
+	<control name="FireCureLimit" value="20"/>
+	<control name="FireCureMana" value="30"/>
+	<control name="FireCureEnable" value="0"/>
+	<control name="EnergyCureLimit" value="15"/>
+	<control name="EnergyCureMana" value="30"/>
+	<control name="EnergyCureEnable" value="0"/>
+	<control name="ParaCureEnable" value="0"/>
+	<control name="ParaCureMana" value="50"/>
+	<control name="ParaCureSpell" value="Utani Hur"/>
+	<control name="HasteCastMana" value="50"/>
+	<control name="HasteCastSpell" value="Utani Hur"/>
+	<control name="HasteCastEnable" value="0"/>
+	<control name="InvisibleCastMana" value="50"/>
+	<control name="InvisibleCastEnable" value="0"/>
+	<control name="ShieldCastMana" value="50"/>
+	<control name="ShieldCastEnable" value="0"/>
+	<control name="RecoveryCastEnable" value="0"/>
+	<control name="RecoveryCastType" value="0"/>
+	<control name="RecoveryCastMana" value="75"/>
+	<control name="RecoveryCheckPzEnable" value="1"/>
+</panel>
+<panel name="Equipment Manager">
+	<control name="AmmoRefillID" value="3450"/>
+	<control name="AmmoRefillEnable" value="0"/>
+	<control name="WeaponRefillID" value="7368"/>
+	<control name="WeaponRefillEnable" value="0"/>
+</panel>
+<panel name="Targeting">
+	<control name="TargetingList">
+	</control>
+</panel>
+<panel name="Walker">
+	<control name="WaypointList">
+		<item text="GroundFloor:" tag="255"/>
+		<item text="Stand (32788, 31247, 7)" tag="1"/>
+		<item text="CheckDepotsDown:" tag="255"/>
+		<item text="StairsUp:" tag="255"/>
+		<item text="Stand (32786, 31248, 7)" tag="1"/>
+		<item text="CheckUpstairs:" tag="255"/>
+		<item text="FirstFloor:" tag="255"/>
+		<item text="Stand (32788, 31247, 6)" tag="1"/>
+		<item text="CheckDepotsUp:" tag="255"/>
+		<item text="StairsDown:" tag="255"/>
+		<item text="Stand (32786, 31248, 6)" tag="1"/>
+		<item text="CheckDownstairs:" tag="255"/>
+		<item text="Spot1:" tag="255"/>
+		<item text="Stand (32793, 31251, 7)" tag="1"/>
+		<item text="CheckSpot1:" tag="255"/>
+		<item text="Spot2:" tag="255"/>
+		<item text="Stand (32793, 31244, 7)" tag="1"/>
+		<item text="CheckSpot2:" tag="255"/>
+		<item text="Spot3:" tag="255"/>
+		<item text="Stand (32789, 31251, 7)" tag="1"/>
+		<item text="CheckSpot3:" tag="255"/>
+		<item text="Spot4:" tag="255"/>
+		<item text="Stand (32789, 31244, 7)" tag="1"/>
+		<item text="CheckSpot4:" tag="255"/>
+		<item text="Spot5:" tag="255"/>
+		<item text="Stand (32785, 31251, 7)" tag="1"/>
+		<item text="CheckSpot5:" tag="255"/>
+		<item text="Spot6:" tag="255"/>
+		<item text="Stand (32785, 31244, 7)" tag="1"/>
+		<item text="CheckSpot6:" tag="255"/>
+		<item text="Spot7:" tag="255"/>
+		<item text="Stand (32781, 31251, 7)" tag="1"/>
+		<item text="CheckSpot7:" tag="255"/>
+		<item text="Spot8:" tag="255"/>
+		<item text="Stand (32781, 31244, 7)" tag="1"/>
+		<item text="CheckSpot8:" tag="255"/>
+		<item text="Spot9:" tag="255"/>
+		<item text="Stand (32793, 31251, 6)" tag="1"/>
+		<item text="CheckSpot9:" tag="255"/>
+		<item text="Spot10:" tag="255"/>
+		<item text="Stand (32793, 31244, 6)" tag="1"/>
+		<item text="CheckSpot10:" tag="255"/>
+		<item text="Spot11:" tag="255"/>
+		<item text="Stand (32789, 31251, 6)" tag="1"/>
+		<item text="CheckSpot11:" tag="255"/>
+		<item text="Spot12:" tag="255"/>
+		<item text="Stand (32789, 31244, 6)" tag="1"/>
+		<item text="CheckSpot12:" tag="255"/>
+		<item text="Spot13:" tag="255"/>
+		<item text="Stand (32785, 31251, 6)" tag="1"/>
+		<item text="CheckSpot13:" tag="255"/>
+		<item text="Spot14:" tag="255"/>
+		<item text="Stand (32785, 31244, 6)" tag="1"/>
+		<item text="CheckSpot14:" tag="255"/>
+		<item text="Spot15:" tag="255"/>
+		<item text="Stand (32781, 31251, 6)" tag="1"/>
+		<item text="CheckSpot15:" tag="255"/>
+		<item text="Spot16:" tag="255"/>
+		<item text="Stand (32781, 31244, 6)" tag="1"/>
+		<item text="CheckSpot16:" tag="255"/>
+	</control>
+</panel>
+<panel name="Walker Options">
+	<control name="ropeOption" value="0"/>
+	<control name="shovelOption" value="0"/>
+</panel>
+<panel name="Looter">
+	<control name="LootList" first="0" unlisted="0">
+	</control>
+</panel>
+<panel name="Pathfinder">
+	<control name="walkOnFireEnable" value="1"/>
+	<control name="walkOnFurnitureEnable" value="1"/>
+	<control name="showDiagnoticEnable" value="0"/>
+	<control name="walkWithMapclicks" value="0"/>
+</panel>
+<panel name="Mount">
+</panel>
+<panel name="Special Areas">
+	<control name="AreaList">
+		<item title="RightSide" consider="3" width="1" height="4" x="32797" y="31247" z="7"/>
+		<item title="LeftSide" consider="3" width="1" height="4" x="32776" y="31246" z="7"/>
+	</control>
+</panel>
+<panel name="Alarms">
+	<control name="disAlarm" value="0"/>
+	<control name="damAlarm" value="0"/>
+	<control name="lhpAlarm" value="0"/>
+	<control name="lhpAlarmPercent" value="50"/>
+	<control name="pmAlarm" value="0"/>
+	<control name="creatureAlarm" value="0"/>
+	<control name="attackAlarm" value="0"/>
+	<control name="playerAlarm" value="0"/>
+	<control name="playerAlarmLog" value="0"/>
+	<control name="stuckAlarm" value="0"/>
+	<control name="burstAlarm" value="0"/>
+	<control name="burstAlarmPercent" value="500"/>
+	<control name="averageAlarm" value="0"/>
+	<control name="averageAlarmPercent" value="200"/>
+	<control name="alarmPartyIgnore" value="0"/>
+</panel>
+<panel name="Scripter">
+	<control name="RunningScriptList">
+	</control>
+</panel>
+<panel name="Advertising">
+	<control name="watchSellingWords" value="item, item2"/>
+	<control name="watchSellingEnable" value="0"/>
+	<control name="watchBuyingWords" value="item, item2"/>
+	<control name="watchBuyingEnable" value="0"/>
+	<control name="blockLinksEnable" value="0"/>
+	<control name="reduceSpamEnable" value="0"/>
+</panel>
