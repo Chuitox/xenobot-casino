@@ -31,7 +31,7 @@
 				Payout: 1 - 500%
 				
 		3. DO NOT perform actions manually with the script running, first type /stop in the script channel
-		4. The features that affect performance are labeled
+		4. The features that affect performance are labelled
 		5. Trashed dice will go to the items container when items are accepted
 		6. Start the script by activating the Walker or placing yourself in the LEFT SIDE of a depot and typing /start
 		7. Type /help in the script channel for a list of available commands
@@ -94,10 +94,10 @@
 	_Remote_BackupCrystalCoins = 200											-- Amount of crystal coins to leave inside the depot
 	
 	-- Statistics --
-	_Statistics_UseLog = false													-- Log Statistics | WARNING: May affect performance if enabled
+	_Statistics_UseLog = false													-- Log Statistics | WARNING! May affect performance if enabled
 
 	-- Debug Messages --
-	_Debug_MessagesInChannel = false											-- Debug messages | WARNING: May affect performance if enabled
+	_Debug_MessagesInChannel = false											-- Debug messages | WARNING! May affect performance if enabled
 	_Debug_UseLog = false														-- May affect performance if enabled
 
 	-- Extra Settings --
@@ -106,10 +106,10 @@
 	_Extra_ServerSave = "10:00"													-- Time of the Server Save in your country 24h format
 	_Extra_ScreenshotOnStop = true												-- Take screenshot when stopping the script
 	_Extra_WorkloadExecution = 'default'										-- The speed to execute actions (default/fast/medium/slow)
-	_Extra_PingCompensation = 100												-- Ping compensation for slow connections
 	_Extra_RestartOnKick = true													-- Restart the script if the character has been kicked from game
 	
 	-- OpenTibia --
+	_OpenTibia = false															-- Run script in Open Tibia Servers
 	_OpenTibia_Indexes = { 9, 11, 8, 7, 10, 14, 15, 12 }						-- Indexes used when running the script in OpenTibia servers
 	
 ------------------------------------------------------------------------------------------------------------------
@@ -341,30 +341,30 @@
 	Items_List =
 	{
 		-- Products --
-		{ Name = "Magic Sulphur",				Value = 8000 	},
-		{ Name = "Dragon Claw",					Value = 300000 	},
-		{ Name = "Soul Stone",					Value = 500000 	},
-		{ Name = "Spider Silk",					Value = 4000 	},
-		{ Name = "Dracola's Eye", 				Value = 50000 	},
-		{ Name = "Dracoyle Statue", 			Value = 5000 	},
-		{ Name = "Red Piece Of Cloth", 			Value = 20000 	},
-		{ Name = "Flask of Warrior's Sweat",	Value = 10000 	},
-		{ Name = "Mr. Punish's Handcuffs", 		Value = 50000 	},
-		{ Name = "Piece of Massacre's Shell", 	Value = 50000 	},
-		{ Name = "Skeleton Decoration", 		Value = 3000 	},
-		{ Name = "Sniper Gloves", 				Value = 2000 	},
+		{ Name = "Magic Sulphur",				Value = 8000	},
+		{ Name = "Dragon Claw",					Value = 300000	},
+		{ Name = "Soul Stone",					Value = 500000	},
+		{ Name = "Spider Silk",					Value = 4000	},
+		{ Name = "Dracola's Eye",				Value = 50000	},
+		{ Name = "Dracoyle Statue",				Value = 5000	},
+		{ Name = "Red Piece Of Cloth",			Value = 20000	},
+		{ Name = "Flask of Warrior's Sweat",	Value = 10000	},
+		{ Name = "Mr. Punish's Handcuffs",		Value = 50000	},
+		{ Name = "Piece of Massacre's Shell",	Value = 50000	},
+		{ Name = "Skeleton Decoration",			Value = 3000	},
+		{ Name = "Sniper Gloves",				Value = 2000	},
 		{ Name = "Spirit Container", 			Value = 40000	},
-		{ Name = "Tentacle Piece", 				Value = 5000 	},
-		{ Name = "The Plasmother's Remains", 	Value = 50000 	},
-		{ Name = "Demonic Essence", 			Value = 1000 	},
+		{ Name = "Tentacle Piece",				Value = 5000	},
+		{ Name = "The Plasmother's Remains",	Value = 50000 	},
+		{ Name = "Demonic Essence",				Value = 1000	},
 		-- Others --
-		{ Name = "Pair Of Soft Boots", 			Value = 300000 	},
-		{ Name = "Worn Soft Boots", 			Value = 300000 	},
-		{ Name = "Firewalker Boots", 			Value = 150000 	},
-		{ Name = "Worn Firewalker Boots", 		Value = 150000 	},
+		{ Name = "Pair Of Soft Boots",			Value = 300000	},
+		{ Name = "Worn Soft Boots",				Value = 300000	},
+		{ Name = "Firewalker Boots",			Value = 150000	},
+		{ Name = "Worn Firewalker Boots", 		Value = 150000	},
 		-- Blue Djinn --
-		{ Name = "Angelic Axe", 				Value = 5000	},
-		{ Name = "Blue Robe", 					Value = 10000 	},
+		{ Name = "Angelic Axe",					Value = 5000	},
+		{ Name = "Blue Robe",					Value = 10000	},
 		{ Name = "Boots Of Haste",				Value = 30000	},
 		{ Name = "Butcher's Axe",				Value = 18000	},
 		{ Name = "Crown Armor",					Value = 12000	},
@@ -564,7 +564,7 @@
 --[[ DO NOT EDIT ANYTHING BELOW THIS LINE ]]--
 	Script_Information =
 	{
-		Name = "Open Casino v2.0",
+		Name = "Casino Script v2.0",
 		Developer = "Chuitox"
 	}
 	InformationText = Script_Information.Name.." by "..Script_Information.Developer..'\n'
@@ -679,7 +679,6 @@
 					_Broadcast_YellMessages = false
 					_Broadcast_FixedInterval = false
 					_Broadcast_UseMessages = true
-					_Extra_PingCompensation = 100
 					_Inactivity_Detection = false
 					Blackjack_Minimum = 5000
 					Blackjack_Maximum = 500000
@@ -884,10 +883,6 @@
 			Single_Numbers_Maximum = 200000
 			ProcessDebugMessage('Casino', 'Invalid value. Single Numbers maximum cash accepted has been reset to '..Single_Numbers_Maximum..' ('..(Single_Numbers_Maximum/1000)..'k)')
 		end
-	end
-	if _Extra_PingCompensation < 0 or _Extra_PingCompensation > 1000 then
-		_Extra_PingCompensation = 100
-		ProcessDebugMessage('Casino', 'Invalid value. Ping compensation has been reset to '.._Extra_PingCompensation)
 	end
 	if _Inactivity_Interval < 0 or _Inactivity_Interval > 15 then
 		_Inactivity_Interval = 5
@@ -1765,7 +1760,7 @@
 						local tempItemDepotChest = Containers.Depot:GetItemData(itemDepotChest)
 						if _Decoration_Item_ID == tempItemDepotChest.id then
 							while Containers.Depot:MoveItemToGround(itemDepotChest, Coordinates.Locker.x, Coordinates.Locker.y, Coordinates.Locker.z, 1) ~= 1 do end
-							wait(1000 + _Extra_PingCompensation)
+							wait(1000 + Self.Ping())
 							break
 						end
 					end
@@ -1777,7 +1772,7 @@
 				local tempItemDepotChest = Containers.Depot:GetItemData(itemDepotChest)
 				if table.contains(Dice_IDs, tempItemDepotChest.id) then
 					while Containers.Depot:MoveItemToGround(itemDepotChest, Coordinates.Locker.x, Coordinates.Locker.y, Coordinates.Locker.z, 1) ~= 1 do end
-					wait(1000 + _Extra_PingCompensation)
+					wait(1000 + Self.Ping())
 					break
 				end
 			end
@@ -1796,7 +1791,7 @@
 					local tempItemLocker = Containers.Locker:GetItemData(itemLocker)
 					if table.contains(Dice_IDs, tempItemLocker.id) then
 						while Containers.Locker:MoveItemToContainer(itemLocker, Containers.Depot:Index(), 0) ~= 1 do end
-						wait(1000 + _Extra_PingCompensation)
+						wait(1000 + Self.Ping())
 						break
 					end
 				end
@@ -1811,7 +1806,7 @@
 							local tempItemLocker = Containers.Locker:GetItemData(itemLocker)
 							if _Decoration_Item_ID == tempItemLocker.id then
 								while Containers.Locker:MoveItemToContainer(itemLocker, Containers.Depot:Index(), 0) ~= 1 do end
-								wait(1000 + _Extra_PingCompensation)
+								wait(1000 + Self.Ping())
 								break
 							end
 						end
@@ -1836,26 +1831,26 @@
 			end
 			Client.HideEquipment()
 			if Self.BrowseField(Coordinates.Counter.x, Coordinates.Counter.y, Coordinates.Counter.z) == 1 then
-				wait(500 + _Extra_PingCompensation)
-				Containers.Counter = Container(0)
+				wait(500 + Self.Ping())
+				Containers.Counter = Container(_OpenTibia and _OpenTibia_Indexes[0] or 0)
 				Containers.Counter:Minimize()
 				wait(100)
 				Client.HideEquipment()
 				ProcessDebugMessage('Casino Debugger', 'Counter browse field opened')
 				if Self.BrowseField(Coordinates.Locker.x, Coordinates.Locker.y, Coordinates.Locker.z) == 1 then
-					wait(500 + _Extra_PingCompensation)
-					Containers.Locker = Container(1)
+					wait(500 + Self.Ping())
+					Containers.Locker = Container(_OpenTibia and _OpenTibia_Indexes[1] or 1)
 					Containers.Locker:Minimize()
 					wait(100)
 					Client.HideEquipment()
 					ProcessDebugMessage('Casino Debugger', 'Locker browse field opened')
 					if table.contains(Locker_IDs, Containers.Locker:GetItemData(0).id) then
 						Containers.Locker:OpenChildren({Containers.Locker:GetItemData(0).id, false})
-						wait(500 + _Extra_PingCompensation)
-						if Container(2):UseItem(0, true) == 1 then
+						wait(500 + Self.Ping())
+						if Container(_OpenTibia and _OpenTibia_Indexes[2] or 2):UseItem(0, true) == 1 then
 							local index = 0
-							wait(500 + _Extra_PingCompensation)
-							Containers.Depot = Container(2)
+							wait(500 + Self.Ping())
+							Containers.Depot = Container(_OpenTibia and _OpenTibia_Indexes[2] or 2)
 							Containers.Depot:Minimize()
 							wait(100)
 							if Accept_Items then
@@ -1865,8 +1860,8 @@
 										local item = Containers.Depot:GetItemData(i)
 										if item.id == Item.GetID(_Containers_Items) then
 											local opento = Container.GetFreeSlot()
-											while (Containers.Depot:UseItem(i) ~= 1) do wait(300 + _Extra_PingCompensation) end
-											wait(500 + _Extra_PingCompensation)
+											while (Containers.Depot:UseItem(i) ~= 1) do wait(300 + Self.Ping()) end
+											wait(500 + Self.Ping())
 											Containers.Items = Container(opento)
 											Containers.Items:Minimize()
 											wait(100)
@@ -1887,8 +1882,8 @@
 										local item = Containers.Depot:GetItemData(i)
 										if item.id == Item.GetID(_Containers_CrystalCoins) then
 											local opento = Container.GetFreeSlot()
-											while (Containers.Depot:UseItem(i) ~= 1) do wait(300 + _Extra_PingCompensation) end
-											wait(500 + _Extra_PingCompensation)
+											while (Containers.Depot:UseItem(i) ~= 1) do wait(300 + Self.Ping()) end
+											wait(500 + Self.Ping())
 											Containers.Crystal[index] = Container(opento)
 											Containers.Crystal[index]:Minimize()
 											wait(100)
@@ -1911,8 +1906,8 @@
 										local item = Containers.Depot:GetItemData(i)
 										if item.id == Item.GetID(_Containers_PlatinumCoins) then
 											local opento = Container.GetFreeSlot()
-											while (Containers.Depot:UseItem(i) ~= 1) do wait(300 + _Extra_PingCompensation) end
-											wait(500 + _Extra_PingCompensation)
+											while (Containers.Depot:UseItem(i) ~= 1) do wait(300 + Self.Ping()) end
+											wait(500 + Self.Ping())
 											Containers.Platinum[index] = Container(opento)
 											Containers.Platinum[index]:Minimize()
 											wait(100)
@@ -1926,7 +1921,7 @@
 								ProcessDebugMessage('Casino', 'Error. Platinum coins container not found: '.._Containers_PlatinumCoins)
 								return false
 							end
-							wait(500 + _Extra_PingCompensation)
+							wait(500 + Self.Ping())
 							Client.HideEquipment()
 							ProcessDebugMessage('Casino Debugger', 'Platinum coins containers opened')
 							ProcessDebugMessage('Casino', 'All containers were loaded successfully')
