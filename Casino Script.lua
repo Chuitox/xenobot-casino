@@ -568,6 +568,14 @@
 		Developer = "Chuitox"
 	}
 	InformationText = Script_Information.Name.." by "..Script_Information.Developer..'\n'
+	
+	-- Keep compatibility with older clients
+	if (_G['getSelfPing'] == nil) then
+		Self.Ping = function()
+			return 100
+		end
+	end
+	
 	function onSpeak(channel, message)
 		channel:SendYellowMessage(getUserName():titlecase(), message)
 		message = message:lower():trim()
