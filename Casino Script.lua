@@ -2345,7 +2345,7 @@ end
 						StopMessage = 'Stopping script due to few available slots for items. Please, add another "'.._Containers_Items..'" inside the last container'
 						ManualStop = true
 					end
-					if Count_Platinum_Extended() <= 100 then
+					if Count_Platinum_Extended() <= 1 then
 						StopMessage = 'Stopping script due to low platinum coins ('..(Count_Platinum_Extended()/1000)..'k)'
 						ManualStop = true
 					end
@@ -3060,7 +3060,12 @@ end
 							end
 							local tempDice = Containers.Locker:GetItemData(diceInLocker)
 							if table.contains(Dice_IDs, tempDice.id) then
-								Dice_Rolled_Check = Containers.Locker:UseItem(diceInLocker, true)
+								if (_VirtualMode_) then
+									Dice_Rolled_Check = 1
+									EffectProxyMessage = Self.Name()..' rolled a '..math.random(1, 6)..'.'
+								else
+									Dice_Rolled_Check = Containers.Locker:UseItem(diceInLocker, true)
+								end
 								break
 							end
 						end
