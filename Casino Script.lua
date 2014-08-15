@@ -56,7 +56,7 @@
 	_Containers_Items = "Beach Backpack"										-- Container for items
 
 	-- Inactivity System --
-	_Inactivity_Detection = true												-- Search new depot when inactive
+	_Inactivity_Detection = false												-- Search new depot when inactive
 	_Inactivity_Interval = 2													-- Minutes to wait before searching a new depot
 	_Inactivity_AntiIdle = false												-- Built-In Anti-Idle
 	_Inactivity_NotifyBlockedSpot = false										-- Notify to the player when the spot is blocked (Inactivity detection must disabled)
@@ -64,7 +64,7 @@
 	_Inactivity_BlockedSpotInterval = 2											-- Minutes to wait before notifying blocked spot
 	
 	-- Decoration --
-	_Decoration_Enabled = true													-- Use decoration under dice		
+	_Decoration_Enabled = false													-- Use decoration under dice		
 	_Decoration_Item = "Ectoplasmic Sushi"										-- Name of item to use as decoration | Default: "Ectoplasmic Sushi"
 	
 	-- Randomizer --
@@ -97,7 +97,7 @@
 	_Statistics_UseLog = false													-- Log Statistics | WARNING! May affect performance if enabled
 
 	-- Debug Messages --
-	_Debug_MessagesInChannel = false											-- Debug messages | WARNING! May affect performance if enabled
+	_Debug_MessagesInChannel = true											-- Debug messages | WARNING! May affect performance if enabled
 	_Debug_UseLog = false														-- May affect performance if enabled
 
 	-- Extra Settings --
@@ -109,8 +109,8 @@
 	_Extra_RestartOnKick = true													-- Restart the script if the character has been kicked from game
 	
 	-- OpenTibia --
-	_OpenTibia = false															-- Run script in Open Tibia Servers
-	_OpenTibia_Indexes = { 9, 11, 8, 7, 10, 14, 15, 12 }						-- Indexes used when running the script in OpenTibia servers
+	_OpenTibia = true															-- Run script in Open Tibia Servers
+	_OpenTibia_Indexes = { 12, 15, 1, 7, 10, 14, 15, 12 }						-- Indexes used when running the script in OpenTibia servers
 	
 ------------------------------------------------------------------------------------------------------------------
 --												G A M E   T Y P E S												--
@@ -779,7 +779,7 @@
 	DEVELOPER_HEADER = HUD(10, 20, '. : : '..Script_Information.Developer..' '..Script_Information.Name..' : : .', 0, 170, 20)
 	USER_HEADER = HUD(10, 40, "XENOBOT USER", 125, 255, 140)
 	USER_NAME = HUD(140, 40, getUserName():titlecase(), 255, 255, 255)
-	STATS_HEADER = HUD(10, 60, STATISTICS, 125, 255, 140)
+	STATS_HEADER = HUD(10, 60, "STATISTICS", 125, 255, 140)
 	if _Effects_Interval < 1 or _Effects_Interval > 60 then
 		_Effects_Interval = 1
 		ProcessDebugMessage('Casino', 'Invalid value. The effects interval has been reset to '.._Effects_Interval..' second')
@@ -1840,14 +1840,14 @@
 			Client.HideEquipment()
 			if Self.BrowseField(Coordinates.Counter.x, Coordinates.Counter.y, Coordinates.Counter.z) == 1 then
 				wait(500 + Self.Ping())
-				Containers.Counter = Container(_OpenTibia and _OpenTibia_Indexes[0] or 0)
+				Containers.Counter = Container(_OpenTibia and _OpenTibia_Indexes[1] - 1 or 0)
 				Containers.Counter:Minimize()
 				wait(100)
 				Client.HideEquipment()
 				ProcessDebugMessage('Casino Debugger', 'Counter browse field opened')
 				if Self.BrowseField(Coordinates.Locker.x, Coordinates.Locker.y, Coordinates.Locker.z) == 1 then
 					wait(500 + Self.Ping())
-					Containers.Locker = Container(_OpenTibia and _OpenTibia_Indexes[1] or 1)
+					Containers.Locker = Container(_OpenTibia and _OpenTibia_Indexes[2] - 1 or 1)
 					Containers.Locker:Minimize()
 					wait(100)
 					Client.HideEquipment()
@@ -1855,12 +1855,12 @@
 					if table.contains(Locker_IDs, Containers.Locker:GetItemData(0).id) then
 						Containers.Locker:OpenChildren({Containers.Locker:GetItemData(0).id, false})
 						wait(500 + Self.Ping())
-						if Container(_OpenTibia and _OpenTibia_Indexes[2] or 2):UseItem(0, true) == 1 then
+						if Container(_OpenTibia and _OpenTibia_Indexes[3] - 1 or 2):UseItem(0, true) == 1 then
 							local index = 0
 							wait(500 + Self.Ping())
-							Containers.Depot = Container(_OpenTibia and _OpenTibia_Indexes[2] or 2)
+							Containers.Depot = Container(_OpenTibia and _OpenTibia_Indexes[3] - 1 or 2)
 							Containers.Depot:Minimize()
-							wait(100)
+							wait(100 + Self.Ping())
 							if Accept_Items then
 								Client.HideEquipment()
 								if Count_Extended(Containers.Depot, {Item.GetID(_Containers_Items)}) > 0 then
@@ -1872,7 +1872,7 @@
 											wait(500 + Self.Ping())
 											Containers.Items = Container(opento)
 											Containers.Items:Minimize()
-											wait(100)
+											wait(100 + Self.Ping())
 											ProcessDebugMessage('Casino Debugger', 'Items container opened')
 											break
 										end
@@ -1894,7 +1894,7 @@
 											wait(500 + Self.Ping())
 											Containers.Crystal[index] = Container(opento)
 											Containers.Crystal[index]:Minimize()
-											wait(100)
+											wait(100 + Self.Ping())
 											index = index + 1
 										end
 									else
@@ -1918,7 +1918,7 @@
 											wait(500 + Self.Ping())
 											Containers.Platinum[index] = Container(opento)
 											Containers.Platinum[index]:Minimize()
-											wait(100)
+											wait(100 + Self.Ping())
 											index = index + 1
 										end
 									else
