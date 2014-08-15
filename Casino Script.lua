@@ -2345,7 +2345,7 @@ end
 						StopMessage = 'Stopping script due to few available slots for items. Please, add another "'.._Containers_Items..'" inside the last container'
 						ManualStop = true
 					end
-					if Count_Platinum_Extended() <= 1 then
+					if Count_Platinum_Extended() <= 100 then
 						StopMessage = 'Stopping script due to low platinum coins ('..(Count_Platinum_Extended()/1000)..'k)'
 						ManualStop = true
 					end
