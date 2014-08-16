@@ -68,7 +68,7 @@
 	_Decoration_Item = "Ectoplasmic Sushi"										-- Name of item to use as decoration | Default: "Ectoplasmic Sushi"
 	
 	-- Randomizer --
-	_VirtualMethod_	= true														-- User a virtual method to generate random numbers (Replacement for Official servers)
+	_VirtualMode_	= true														-- User a virtual method to generate random numbers (Replacement for Official servers)
 
 ------------------------------------------------------------------------------------------------------------------
 --											A D V A N C E D   S E T U P											--
@@ -94,10 +94,10 @@
 	_Remote_BackupCrystalCoins = 200											-- Amount of crystal coins to leave inside the depot
 	
 	-- Statistics --
-	_Statistics_UseLog = false													-- Log Statistics | WARNING! May affect performance if enabled
+	_Statistics_UseLog = true													-- Log Statistics | WARNING! May affect performance if enabled
 
 	-- Debug Messages --
-	_Debug_MessagesInChannel = true											-- Debug messages | WARNING! May affect performance if enabled
+	_Debug_MessagesInChannel = true												-- Debug messages | WARNING! May affect performance if enabled
 	_Debug_UseLog = false														-- May affect performance if enabled
 
 	-- Extra Settings --
@@ -109,70 +109,70 @@
 	_Extra_RestartOnKick = true													-- Restart the script if the character has been kicked from game
 	
 	-- OpenTibia --
-	_OpenTibia = true															-- Run script in Open Tibia Servers
+	_OpenTibia = false															-- Run script in Open Tibia Servers
 	_OpenTibia_Indexes = { 12, 15, 1, 7, 10, 14, 15, 12 }						-- Indexes used when running the script in OpenTibia servers
 	
 ------------------------------------------------------------------------------------------------------------------
 --												G A M E   T Y P E S												--
 ------------------------------------------------------------------------------------------------------------------
 	-- Blackjack = Player's count (5 rolls) vs. Dealer's count (5 rolls) --
-	Blackjack = false
+	Blackjack = true
 	Blackjack_Minimum = 5000
-	Blackjack_Maximum = 500000
+	Blackjack_Maximum = 100000
 	Blackjack_Payout = 80
 	
 	-- High/Low = 123 or 456 --
 	High_Low = true
 	High_Low_Minimum = 5000
-	High_Low_Maximum = 500000
+	High_Low_Maximum = 100000
 	High_Low_Payout = 80
 	
 	-- Odd/Even = 135 or 246 --
-	Odd_Even = false
+	Odd_Even = true
 	Odd_Even_Minimum = 5000
-	Odd_Even_Maximum = 500000
+	Odd_Even_Maximum = 100000
 	Odd_Even_Payout = 80
 	
 	-- Highest/Lowest = Player's count (Half of rolls) vs. Dealer's count (Half of rolls). Highest wins --
 	-- Only use even numbers like 2, 4, 6, 8, 10
-	Highest_Lowest = false
+	Highest_Lowest = true
 	Highest_Lowest_Rolls = 4
 	Highest_Lowest_Minimum = 5000
-	Highest_Lowest_Maximum = 500000
+	Highest_Lowest_Maximum = 100000
 	Highest_Lowest_Payout = 80
 	
 	-- First/Second/Last = 12, 34 or 56 --
-	First_Second_Last = false
+	First_Second_Last = true
 	First_Second_Last_Minimum = 5000
-	First_Second_Last_Maximum = 300000
+	First_Second_Last_Maximum = 100000
 	First_Second_Last_Payout = 180
 	
 	-- Sequence = seq, sequence, succession or series (123, 234, 456, 654, 543 or 321) --
-	Sequence = false
+	Sequence = true
 	Sequence_Minimum = 5000
-	Sequence_Maximum = 300000
+	Sequence_Maximum = 100000
 	Sequence_Payout = 180
 	
 	-- Pair of numbers = Match roll with 1 out of 2 numbers --
-	Pair_Of_Numbers = false
+	Pair_Of_Numbers = true
 	Pair_Of_Numbers_Minimum = 5000
-	Pair_Of_Numbers_Maximum = 200000
+	Pair_Of_Numbers_Maximum = 100000
 	Pair_Of_Numbers_Payout = 180
 	
 	-- Single Numbers = 1, 2, 3, 4, 5 or 6 --
-	Single_Numbers = false
+	Single_Numbers = true
 	Single_Numbers_Minimum = 5000
-	Single_Numbers_Maximum = 200000
+	Single_Numbers_Maximum = 100000
 	Single_Numbers_Payout = 360
 	
 	-- Beat That = Number between 11 and 66 --
-	Beat_That = false
+	Beat_That = true
 	Beat_That_Minimum = 5000
-	Beat_That_Maximum = 200000
+	Beat_That_Maximum = 100000
 	Beat_That_Payout = 360
 	
 	-- Sum of numbers = Sum several rolls --
-	Sum_Of_Numbers = false
+	Sum_Of_Numbers = true
 	Sum_Of_Numbers_Minimum = 5000
 	Sum_Of_Numbers_Maximum = 100000
 	Sum_Of_Numbers_Maximum_Rolls = 10
@@ -202,23 +202,23 @@
 	-- Digit Game Types --
 	Win_Messages =
 	{
-		-- [amount]
-		"Congratulations! You won [amount]",
-		"Gratz! Here you are, [amount]",
-		"Aaaand we have a winner! You have won [amount]",
-		"Today must be your lucky day! You won [amount]",
+		-- [amount], [roll]
+		"Congratulations! The number rolled was [roll]. You won [amount]",
+		"Gratz! The number rolled was [roll]. Here you are, [amount]",
+		"Aaaand we have a winner! The number rolled was [roll]. You have won [amount]",
+		"Today must be your lucky day! The number rolled was [roll]. You won [amount]",
 	}
 	Lose_Messages =
 	{
-		-- [amount]
-		"I'm sorry, maybe another time",
-		"Oh well you can't always win...",
+		-- [amount], [roll]
+		"I'm sorry, maybe another time. The number rolled was [roll]",
+		"Oh well you can't always win... The number rolled was [roll]",
 	}
 	
 	-- Blackjack --
 	Blackjack_Win_Messages =
 	{
-		-- [playercount], [dealercount], [amount]
+		-- [playercount], [dealercount], [amount], [roll]
 		"Congratulations! Your count is [playercount] and mine [dealercount]. You have won [amount]",
 		"Gratz! The counts were [playercount] vs. [dealercount]. Here you are, [amount]!",
 		"Aaaand we have a winner! The counts were [playercount] vs. [dealercount]. You have won [amount]",
@@ -226,31 +226,31 @@
 	}
 	Blackjack_Lose_Messages =
 	{
-		-- [playercount], [dealercount], [amount]
+		-- [playercount], [dealercount], [amount], [roll]
 		"I'm sorry, maybe another time. The counts were [playercount] vs. [dealercount]",
 		"Oh well, that's [playercount] vs. [dealercount]. I guess you can't always win...",
 	}
 	Blackjack_Even_Result_Messages =
 	{
-		-- [tiecount], [amount]
+		-- [tiecount], [amount], [roll]
 		"It's a tie! We both got a total of [tiecount], here is your [amount]",
 		"We are tied. Both counts were [tiecount]. Here is your [amount] back",
 	}
 	Blackjack_Busted_Player_Messages =
 	{
-		-- [playercount], [amount]
+		-- [playercount], [amount], [roll]
 		"You got busted, your final count was [playercount]",
 		"Busted! Your count is [playercount] and it's above 21",
 	}
 	Blackjack_Busted_Dealer_Messages =
 	{
-		-- [dealercount], [amount]
+		-- [dealercount], [amount], [roll]
 		"My final count was [dealercount] and it's above 21. You have won [amount]",
 		"Well, my count was above 21 as it's [dealercount]. Congratulations! You won [amount]",
 	}
 	Blackjack_Busted_Both_Messages =
 	{
-		-- [playercount], [dealercount], [amount]
+		-- [playercount], [dealercount], [amount], [roll]
 		"Your count was [playercount] and mine [dealercount]. We were both above 21 so here is your [amount] back",
 		"Looks like we both were over 21 with [playercount] vs. [dealercount]. Here is your [amount] back",
 	}
@@ -258,7 +258,7 @@
 	-- Highest/Lowest --
 	Highest_Lowest_Win_Messages =
 	{
-		-- [firstcount], [secondcount], [amount]
+		-- [firstcount], [secondcount], [amount], [roll]
 		"Congratulations! Your count is [firstcount] and mine [secondcount]. You have won [amount]",
 		"Gratz! The counts were [firstcount] and [secondcount]. Here you are, [amount]!",
 		"Aaaand we have a winner! The counts were [firstcount] and [secondcount]. You have won [amount]",
@@ -266,39 +266,39 @@
 	}
 	Highest_Lowest_Lose_Messages =
 	{
-		-- [firstcount], [secondcount], [amount]
+		-- [firstcount], [secondcount], [amount], [roll]
 		"I'm sorry, maybe another time. The counts were [firstcount] and [secondcount]",
 		"Oh well, that's [firstcount] and [secondcount]. I guess you can't always win...",
 	}
 	Highest_Lowest_Even_Result_Messages =
 	{
-		-- [tiecount], [amount]
+		-- [tiecount], [amount], [roll]
 		"Both sums were equal [tiecount], here is your [amount]",
 		"The counts were the same: [tiecount]. Here is your [amount] back",
 	}
 	-- Sequence --
 	Sequence_Win_Messages =
 	{
-		-- [sequence], [amount]
+		-- [sequence], [amount], [roll]
 		"Congratulations! The sequence was [sequence]. You won [amount]",
 		"Gratz! The sequence was [sequence] Here you are, [amount]",
 	}
 	Sequence_Lose_Messages =
 	{
-		-- [sequence], [amount]
+		-- [sequence], [amount], [roll]
 		"I'm sorry, maybe another time. The sequence was [sequence]",
 		"The sequence was [sequence], I guess you can't always win...",
 	}
 	-- Sum Of Numbers --
 	Sum_Win_Messages =
 	{
-		-- [sum], [amount]
+		-- [sum], [amount], [roll]
 		"Congratulations! The sum was [sum]. You won [amount]",
 		"Gratz! The sum was [sum] Here you are, [amount]",
 	}
 	Sum_Lose_Messages =
 	{
-		-- [sum], [amount]
+		-- [sum], [amount], [roll]
 		"I'm sorry, maybe another time. The sum was [sum]",
 		"The sum was [sum], I guess you can't always win...",
 	}
@@ -1385,6 +1385,15 @@
 				PlayerSwitch = {32912,32081,7},
 				PlayerDepot = {32912,32082,7},
 				Counter = {32911,32082,7}
+			},
+			-- TEST
+			{
+				Name = 'Spot41',
+				HouseSwitch = {32664,31906,8},
+				HouseDepot = {32665,31906,8},
+				PlayerSwitch = {32664,31904,8},
+				PlayerDepot = {32665,31904,8},
+				Counter = {32665,31905,8}
 			},
 		}
 	}
@@ -2813,31 +2822,31 @@ end
 					local platinum_coins = 0
 					if (table.contains({'blackjack'}, Player_Option) and Blackjack) then
 						if (Blackjack_Player_Count > 21 and Blackjack_Dealer_Count > 21) then
-							Message = Blackjack_Busted_Both_Messages[math.random(1, #Blackjack_Busted_Both_Messages)]:gsub('%[playercount%]', Blackjack_Player_Count):gsub('%[dealercount%]', Blackjack_Dealer_Count)
+							Message = Blackjack_Busted_Both_Messages[math.random(1, #Blackjack_Busted_Both_Messages)]:gsub('%[playercount%]', Blackjack_Player_Count):gsub('%[dealercount%]', Blackjack_Dealer_Count):gsub('%[roll]', data)
 							PayCash = true
 						elseif (Blackjack_Player_Count <= 21 and Blackjack_Dealer_Count > 21) then
-							Message = Blackjack_Busted_Dealer_Messages[math.random(1, #Blackjack_Busted_Dealer_Messages)]:gsub('%[dealercount%]', Blackjack_Dealer_Count)
+							Message = Blackjack_Busted_Dealer_Messages[math.random(1, #Blackjack_Busted_Dealer_Messages)]:gsub('%[dealercount%]', Blackjack_Dealer_Count):gsub('%[roll]', data)
 							PayCash = true
 						elseif(Blackjack_Player_Count > 21 and Blackjack_Dealer_Count <= 21) then
-							Message = Blackjack_Busted_Player_Messages[math.random(1, #Blackjack_Busted_Player_Messages)]:gsub('%[playercount%]', Blackjack_Player_Count)
+							Message = Blackjack_Busted_Player_Messages[math.random(1, #Blackjack_Busted_Player_Messages)]:gsub('%[playercount%]', Blackjack_Player_Count):gsub('%[roll]', data)
 							PayCash = false
 						elseif Blackjack_Player_Count > Blackjack_Dealer_Count then
-							Message = Blackjack_Win_Messages[math.random(1, #Blackjack_Win_Messages)]:gsub('%[playercount%]', Blackjack_Player_Count):gsub('%[dealercount%]', Blackjack_Dealer_Count)
+							Message = Blackjack_Win_Messages[math.random(1, #Blackjack_Win_Messages)]:gsub('%[playercount%]', Blackjack_Player_Count):gsub('%[dealercount%]', Blackjack_Dealer_Count):gsub('%[roll]', data)
 							PayCash = true
 						elseif Blackjack_Player_Count < Blackjack_Dealer_Count then
-							Message = Blackjack_Lose_Messages[math.random(1, #Blackjack_Lose_Messages)]:gsub('%[playercount%]', Blackjack_Player_Count):gsub('%[dealercount%]', Blackjack_Dealer_Count)
+							Message = Blackjack_Lose_Messages[math.random(1, #Blackjack_Lose_Messages)]:gsub('%[playercount%]', Blackjack_Player_Count):gsub('%[dealercount%]', Blackjack_Dealer_Count):gsub('%[roll]', data)
 							PayCash = false
 						elseif Blackjack_Player_Count == Blackjack_Dealer_Count then
-							Message = Blackjack_Even_Result_Messages[math.random(1, #Blackjack_Even_Result_Messages)]:gsub('%[tiecount%]', Blackjack_Player_Count)
+							Message = Blackjack_Even_Result_Messages[math.random(1, #Blackjack_Even_Result_Messages)]:gsub('%[tiecount%]', Blackjack_Player_Count):gsub('%[roll]', data)
 							PayCash = true
 						end
 						Payout_Percent = Blackjack_Payout
 					elseif (table.contains({'sum'}, Player_Option) and Sum_Of_Numbers) then
 						if (Sum_Of_Numbers_Sum == Game_Types.Sum.Choice) then
 							PayCash = true
-							Message = Sum_Win_Messages[math.random(1, #Sum_Win_Messages)]:gsub('%[sum%]', Sum_Of_Numbers_Sum)
+							Message = Sum_Win_Messages[math.random(1, #Sum_Win_Messages)]:gsub('%[sum%]', Sum_Of_Numbers_Sum):gsub('%[roll]', data)
 						else
-							Message = Sum_Lose_Messages[math.random(1, #Sum_Lose_Messages)]:gsub('%[sum%]', Sum_Of_Numbers_Sum)
+							Message = Sum_Lose_Messages[math.random(1, #Sum_Lose_Messages)]:gsub('%[sum%]', Sum_Of_Numbers_Sum):gsub('%[roll]', data)
 						end
 						Payout_Percent = (Sum_Of_Numbers_Payout / (Sum_Of_Numbers_Maximum_Rolls * 6)) * Game_Types.Sum.Choice
 					elseif (table.contains({'beat that'}, Player_Option) and Beat_That) then
@@ -2848,29 +2857,29 @@ end
 					elseif (table.contains({'sequence'}, Player_Option) and Sequence) then
 						if (table.contains({123,234,345,456,654,543,432,321}, Sequence_Count)) then
 							PayCash = true
-							Message = Sequence_Win_Messages[math.random(1, #Sequence_Win_Messages)]:gsub('%[sequence%]', Sequence_Count)
+							Message = Sequence_Win_Messages[math.random(1, #Sequence_Win_Messages)]:gsub('%[sequence%]', Sequence_Count):gsub('%[roll]', data)
 						else
-							Message = Sequence_Lose_Messages[math.random(1, #Sequence_Lose_Messages)]:gsub('%[sequence%]', Sequence_Count)
+							Message = Sequence_Lose_Messages[math.random(1, #Sequence_Lose_Messages)]:gsub('%[sequence%]', Sequence_Count):gsub('%[roll]', data)
 						end
 						Payout_Percent = Sequence_Payout
 					elseif (table.contains({'highest', 'lowest'}, Player_Option) and Highest_Lowest) then
 						if Highest_Lowest_First_Sum == Highest_Lowest_Second_Sum then
-							Message = Highest_Lowest_Even_Result_Messages[math.random(1, #Highest_Lowest_Even_Result_Messages)]:gsub('%[tiecount%]', Highest_Lowest_First_Sum)
+							Message = Highest_Lowest_Even_Result_Messages[math.random(1, #Highest_Lowest_Even_Result_Messages)]:gsub('%[tiecount%]', Highest_Lowest_First_Sum):gsub('%[roll]', data)
 							PayCash = true
 						else
 							if table.contains({'highest'}, Player_Option) then
 								if Highest_Lowest_First_Sum > Highest_Lowest_Second_Sum then
 									PayCash = true
-									Message = Highest_Lowest_Win_Messages[math.random(1, #Highest_Lowest_Win_Messages)]:gsub('%[firstcount%]', Highest_Lowest_First_Sum):gsub('%[secondcount%]', Highest_Lowest_Second_Sum)
+									Message = Highest_Lowest_Win_Messages[math.random(1, #Highest_Lowest_Win_Messages)]:gsub('%[firstcount%]', Highest_Lowest_First_Sum):gsub('%[secondcount%]', Highest_Lowest_Second_Sum):gsub('%[roll]', data)
 								else
-									Message = Highest_Lowest_Lose_Messages[math.random(1, #Highest_Lowest_Lose_Messages)]:gsub('%[firstcount%]', Highest_Lowest_First_Sum):gsub('%[secondcount%]', Highest_Lowest_Second_Sum)
+									Message = Highest_Lowest_Lose_Messages[math.random(1, #Highest_Lowest_Lose_Messages)]:gsub('%[firstcount%]', Highest_Lowest_First_Sum):gsub('%[secondcount%]', Highest_Lowest_Second_Sum):gsub('%[roll]', data)
 								end
 							elseif table.contains({'lowest'}, Player_Option) then
 								if Highest_Lowest_First_Sum < Highest_Lowest_Second_Sum then
 									PayCash = true
-									Message = Highest_Lowest_Win_Messages[math.random(1, #Highest_Lowest_Win_Messages)]:gsub('%[firstcount%]', Highest_Lowest_First_Sum):gsub('%[secondcount%]', Highest_Lowest_Second_Sum)
+									Message = Highest_Lowest_Win_Messages[math.random(1, #Highest_Lowest_Win_Messages)]:gsub('%[firstcount%]', Highest_Lowest_First_Sum):gsub('%[secondcount%]', Highest_Lowest_Second_Sum):gsub('%[roll]', data)
 								else
-									Message = Highest_Lowest_Lose_Messages[math.random(1, #Highest_Lowest_Lose_Messages)]:gsub('%[firstcount%]', Highest_Lowest_First_Sum):gsub('%[secondcount%]', Highest_Lowest_Second_Sum)
+									Message = Highest_Lowest_Lose_Messages[math.random(1, #Highest_Lowest_Lose_Messages)]:gsub('%[firstcount%]', Highest_Lowest_First_Sum):gsub('%[secondcount%]', Highest_Lowest_Second_Sum):gsub('%[roll]', data)
 								end
 							end
 						end
@@ -3026,9 +3035,9 @@ end
 						end
 					end
 					if PayCash then
-						Message = Message:gsub('%[amount%]', (crystal_coins*10+platinum_coins*0.1)..'k')
+						Message = Message:gsub('%[amount%]', (crystal_coins*10+platinum_coins*0.1)..'k'):gsub('%[roll]', data)
 					else
-						Message = Message:gsub('%[amount%]', (Player_Balance/1000)..'k')
+						Message = Message:gsub('%[amount%]', (Player_Balance/1000)..'k'):gsub('%[roll]', data)
 					end
 					SendMessage(Last_Player, Message, false)
 				end
@@ -3054,19 +3063,19 @@ end
 				else
 					if Roll_Dice_Signal then
 						ProcessDebugMessage('Casino Debugger', 'Roll System signal acknowledged | Balance is '..Player_Balance..' ('..(Player_Balance/1000)..'k)')
-						for diceInLocker = 0, Containers.Locker:ItemCount()-1 do
-							if diceInLocker > 28 then
-								diceInLocker = 28
-							end
-							local tempDice = Containers.Locker:GetItemData(diceInLocker)
-							if table.contains(Dice_IDs, tempDice.id) then
-								if (_VirtualMode_) then
-									Dice_Rolled_Check = 1
-									EffectProxyMessage = Self.Name()..' rolled a '..math.random(1, 6)..'.'
-								else
-									Dice_Rolled_Check = Containers.Locker:UseItem(diceInLocker, true)
+						if (_VirtualMode_) then
+							Dice_Rolled_Check = 1
+							EffectProxyMessage = Self.Name()..' rolled a '..math.random(1, 6)..'.'
+						else
+							for diceInLocker = 0, Containers.Locker:ItemCount()-1 do
+								if diceInLocker > 28 then
+									diceInLocker = 28
 								end
-								break
+								local tempDice = Containers.Locker:GetItemData(diceInLocker)
+								if table.contains(Dice_IDs, tempDice.id) then
+										Dice_Rolled_Check = Containers.Locker:UseItem(diceInLocker, true)
+									break
+								end
 							end
 						end
 					end
