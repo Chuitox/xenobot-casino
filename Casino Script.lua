@@ -738,14 +738,14 @@
 					Total.Items.Value = 0
 					channel:SendOrangeMessage('Casino', 'All settings have been reset')
 				elseif (execute_cmd == 'help') then
-					channel:SendOrangeMessage('', 'Available commands:')
-					channel:SendOrangeMessage('', '/help                                                         Show this information')
-					channel:SendOrangeMessage('', '/reset                                                       Reset all settings')
-					channel:SendOrangeMessage('', '/start                                                       Start the script')
-					channel:SendOrangeMessage('', '/stop                                                         Stop the script')
-					channel:SendOrangeMessage('', '/open                                                         Open all containers. Use only for testing purposes')
-					channel:SendOrangeMessage('', '/close                                                        Close all containers. Use only for testing purposes')
-					channel:SendOrangeMessage('', '/alwaysactive (true/false)            Search new depot if inactivity period detected')
+					channel:SendOrangeMessage('Casino', 'Available commands:\n'..
+												'/help - Show this information\n'..
+												'/reset - Reset all settings\n'..
+												'/start - Start the script\n'..
+												'/stop - Stop the script\n'..
+												'/open - Open all containers. Use only for testing purposes\n'..
+												'/close - Close all containers. Use only for testing purposes\n'..
+												'/alwaysactive (true/false) - Search new depot if inactivity period detected')
 				else
 					channel:SendOrangeMessage('Casino', 'Unknown command. Type /help for a list of available commands')
 				end
@@ -1394,6 +1394,14 @@
 				PlayerSwitch = {32664,31904,8},
 				PlayerDepot = {32665,31904,8},
 				Counter = {32665,31905,8}
+			},
+			{
+				Name = 'Spot42',
+				HouseSwitch = {32833,31769,10},
+				HouseDepot = {32834,31769,10},
+				PlayerSwitch = {32833,31767,10},
+				PlayerDepot = {32834,31767,10},
+				Counter = {32834,31768,10}
 			},
 		}
 	}
