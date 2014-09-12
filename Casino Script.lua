@@ -117,19 +117,19 @@
 ------------------------------------------------------------------------------------------------------------------
 	-- Blackjack = Player's count (5 rolls) vs. Dealer's count (5 rolls) --
 	Blackjack = true
-	Blackjack_Minimum = 5000
+	Blackjack_Minimum = 1000
 	Blackjack_Maximum = 100000
 	Blackjack_Payout = 80
 	
 	-- High/Low = 123 or 456 --
 	High_Low = true
-	High_Low_Minimum = 5000
+	High_Low_Minimum = 1000
 	High_Low_Maximum = 100000
 	High_Low_Payout = 80
 	
 	-- Odd/Even = 135 or 246 --
 	Odd_Even = true
-	Odd_Even_Minimum = 5000
+	Odd_Even_Minimum = 1000
 	Odd_Even_Maximum = 100000
 	Odd_Even_Payout = 80
 	
@@ -137,43 +137,43 @@
 	-- Only use even numbers like 2, 4, 6, 8, 10
 	Highest_Lowest = true
 	Highest_Lowest_Rolls = 4
-	Highest_Lowest_Minimum = 5000
+	Highest_Lowest_Minimum = 1000
 	Highest_Lowest_Maximum = 100000
 	Highest_Lowest_Payout = 80
 	
 	-- First/Second/Last = 12, 34 or 56 --
 	First_Second_Last = true
-	First_Second_Last_Minimum = 5000
+	First_Second_Last_Minimum = 1000
 	First_Second_Last_Maximum = 100000
 	First_Second_Last_Payout = 180
 	
 	-- Sequence = seq, sequence, succession or series (123, 234, 456, 654, 543 or 321) --
 	Sequence = true
-	Sequence_Minimum = 5000
+	Sequence_Minimum = 1000
 	Sequence_Maximum = 100000
 	Sequence_Payout = 180
 	
 	-- Pair of numbers = Match roll with 1 out of 2 numbers --
 	Pair_Of_Numbers = true
-	Pair_Of_Numbers_Minimum = 5000
+	Pair_Of_Numbers_Minimum = 1000
 	Pair_Of_Numbers_Maximum = 100000
 	Pair_Of_Numbers_Payout = 180
 	
 	-- Single Numbers = 1, 2, 3, 4, 5 or 6 --
 	Single_Numbers = true
-	Single_Numbers_Minimum = 5000
+	Single_Numbers_Minimum = 1000
 	Single_Numbers_Maximum = 100000
 	Single_Numbers_Payout = 360
 	
 	-- Beat That = Number between 11 and 66 --
 	Beat_That = true
-	Beat_That_Minimum = 5000
+	Beat_That_Minimum = 1000
 	Beat_That_Maximum = 100000
 	Beat_That_Payout = 360
 	
 	-- Sum of numbers = Sum several rolls --
 	Sum_Of_Numbers = true
-	Sum_Of_Numbers_Minimum = 5000
+	Sum_Of_Numbers_Minimum = 1000
 	Sum_Of_Numbers_Maximum = 100000
 	Sum_Of_Numbers_Maximum_Rolls = 10
 	Sum_Of_Numbers_Payout = 360
